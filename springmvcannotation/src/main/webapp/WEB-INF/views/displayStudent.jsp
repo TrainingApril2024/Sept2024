@@ -1,3 +1,4 @@
+<%@ page import="com.learn.bean.Student" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -7,6 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%= request.getAttribute("message") %>
+<%
+	out.println(request.getAttribute("student"));
+
+	Student student = (Student) request.getAttribute("student");
+	out.println(student.getName());
+%>
 </body>
 </html>

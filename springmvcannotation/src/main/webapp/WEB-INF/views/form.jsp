@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%= request.getAttribute("message") %>
+<%
+	out.println(request.getAttribute("welcomeMessage"));
+
+%>
 </body>
 </html>
